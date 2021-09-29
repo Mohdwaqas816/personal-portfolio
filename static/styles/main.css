@@ -1,0 +1,222 @@
+.main{
+    background-color: #e5e5e5;
+}
+.navigation-bar{
+    background-color: #354955;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-bar a{
+    color: white;
+}
+.hero{
+    background-color: #2a353d;
+    min-height: 70vh;
+    color: white;
+}
+#profile-pic{
+    height: 190px;
+    width: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.hero--content{
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 5em;  
+}
+
+.hero--content--intro{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+.intro--name{
+    font-size: 86px;
+    letter-spacing: .1em;
+    font-weight: 700;
+  
+}
+
+.description{
+    font-size: 52px;
+    text-align: center;
+    font-weight:normal;
+}
+.slogan{
+    font-size: 22px;
+    text-align: center;
+}
+.project--wrapper{
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    overflow-x: scroll;
+}
+.project--column{
+    min-width: 300px
+}
+
+
+.project--wrapper::-webkit-scrollbar{
+    width: 2px;
+
+}
+.project--wrapper::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+
+}
+.project--wrapper::-webkit-scrollbar-thumb{
+    background-color: #168c9e;
+    outline: 1px solid slategray;
+    border-radius: 100px;
+}
+.project--wrapper::-webkit-scrollbar-thumb:hover{
+    background-color: #18b5ce;
+}
+
+
+
+
+
+.project--thumbnail{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+
+}
+.project--body{
+    background-color: white;
+    padding: 1em;
+}
+.skills--container{
+    width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.contact-container{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.skill--wrapper{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+.section--1{
+    background-color: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.section--2{
+    background-color: #e5e5e5;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.other--skills--wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    
+}
+.skill--tag{
+    background-color: #c4e7f2;
+    width: fit-content;
+    padding: 3px 20px;
+    border-radius: 20px;
+}
+.skill--logo{
+    width: 60px;
+    object-fit: contain;
+  
+}
+
+.project--image{
+    width: 600px;
+}
+
+.contact--form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+
+@media (max-width:900px){
+    .hero--content{
+        padding-bottom: 1.3em;
+    }
+    .hero--content--intro{
+        flex-direction: column;
+        margin-bottom: 2em;
+        gap: 1em;
+    }
+    .project--wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:800px){
+    .hero--content{
+        width: 100%;      
+    }
+ 
+} 
+
+@media (max-width: 800px){
+    .skills--container{
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 600px){
+    .skills--container{
+        width: 100%;
+    }
+   
+}
+
+@media (max-width: 400px){
+ 
+    .skill--wrapper{
+        flex-flow: column;
+    }
+}
+
+@media (max-width: 600px){
+    .footer--container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 666px){
+    .contact-container{
+        width: 300px;
+
+    }
+
+
+
+}
+@media (max-width: 350px){
+    .contact-container{
+        width: 250px;
+
+    }
+
+
+
+}
