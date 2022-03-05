@@ -1,0 +1,135 @@
+
+.main{
+    background-color: #e5e5e5;
+}
+.navigation-bar{
+    background-color: #354955;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-bar a{
+    color: white;
+}
+.hero{
+    background-color: #2a353d;
+    min-height: 70vh;
+    color: white;
+}
+#profile-pic{
+    height: 190px;
+    width: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.hero--content{
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 5em;  
+}
+
+.hero--content--intro{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+.intro--name{
+    font-size: 86px;
+    letter-spacing: .1em;
+    font-weight: 700;
+  
+}
+
+.description{
+    font-size: 52px;
+    text-align: center;
+    font-weight:normal;
+}
+.slogan{
+    font-size: 22px;
+    text-align: center;
+}
+.project--wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.project--thumbnail{
+    width: 100%;
+
+}
+.project--body{
+    background-color: white;
+    padding: 1em;
+}
+.skills--container{
+    width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+}
+.skill--wrapper{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.section--1{
+    background-color: white;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.section--2{
+    background-color: #e5e5e5;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.other--skills--wrapper{
+    display: flex;
+    gap: 1em;
+    
+}
+.skill--tag{
+    background-color: #c4e7f2;
+    width: fit-content;
+    padding: 3px 20px;
+    border-radius: 20px;
+}
+
+.project--image{
+    width: 600px;
+}
+
+
+@media (max-width:900px){
+    .hero--content{
+        padding-bottom: 1.3em;
+    }
+    .hero--content--intro{
+        flex-direction: column;
+        margin-bottom: 2em;
+        gap: 1em;
+    }
+    .project--wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:800px){
+    .hero--content{
+        width: 100%;      
+    }
+ 
+} 
+
+@media (max-width: 800px){
+    .skills--container{
+        width: 100%;
+
+    }
+}
+

@@ -1,0 +1,91 @@
+{% extends 'base/main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+
+    <figure class="highcharts-figure">
+    <div id="container"></div>
+   
+    </figure>
+    <form style="width: 300px; margin: 0 auto;" action="" method="POST">
+      <h4>What type of developer you are?</h4>
+        {% csrf_token %}
+
+        {% for field in form %}
+             <div class="mb-3">
+               <label class="form-label">{{field.label}}</label>
+               {{field}}
+             </div>
+
+             <input class="btn btn-info" type="submit" value="Place your vote" >
+            
+        {% endfor %}
+
+
+
+    </form>
+</div>
+
+<script>
+
+     let loadData = () => {
+       fetch('/api/', {
+         method: 'GET',
+         headers: {'Content-Type': 'application/json',},
+       })
+           .then(response => response.json())
+           .then(data => renderChart(data.fullstack, data.frontend, data.backend));
+     }
+     loadData()
+
+     let renderChart = (fullstack, frontend, backend) => {
+       
+            Highcharts.chart('container', {
+          chart: {
+            type: 'column'
+          },
+          title: {
+            text: 'Developer Types'
+          },
+          subtitle: {
+            text: 'Waqas coding survey'
+          },
+        
+          yAxis: {
+            min: 0,
+            title: {
+              text: 'Total'
+            }
+          },
+        
+          plotOptions: {
+            column: {
+              pointPadding: 0.2,
+              borderWidth: 0
+            }
+          },
+          series: [{
+            name: 'FullStack Dev',
+            data: [fullstack]
+
+          }, {
+            name: 'Frontend Dev',
+            data: [frontend]
+
+          }, {
+            name: 'Backend Dev',
+            data: [backend]
+
+          },]
+        });
+     }
+     renderChart()
+
+  
+</script>
+
+
+{% endblock content %}
